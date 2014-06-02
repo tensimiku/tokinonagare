@@ -11,10 +11,9 @@ how to use it
 in program.cs..
 
 <code>
-<textarea> 
         static async Task ReplyAsync(TwitterContext twitterCtx, ulong tweetid,string status)
         {
-            var tweet = await twitterCtx.ReplyAsync(tweetid, "@changeityours "+status);  // - change it
+            var tweet = await twitterCtx.ReplyAsync(tweetid, "@changeityours "+status);  // &lt- change it
                 if (tweet != null)
                     Console.WriteLine(
                         "Status returned: " +
@@ -28,18 +27,16 @@ in program.cs..
         static bool chkengine(string msg)
         {
             string mentchk = mentidparser(msg);
-            if (mentchk.ToLower() == "mentioncheckstring") // <- change it
+            if (mentchk.ToLower() == "mentioncheckstring") // &lt- change it
                 
                 string idchk = idparser(msg);
-                if (idchk.ToLower() == "idcheckstring") // <- change it
+                if (idchk.ToLower() == "idcheckstring") // &lt- change it
                 {
                     return true;
                 }
             }
             return false;
         }
-        
-</textarea>
 </code>
 
 in App.config..
