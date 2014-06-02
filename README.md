@@ -11,7 +11,7 @@ how to use it
 in program.cs..
 
 <code>
-<xmp>
+<textarea> 
         static async Task ReplyAsync(TwitterContext twitterCtx, ulong tweetid,string status)
         {
             var tweet = await twitterCtx.ReplyAsync(tweetid, "@changeityours "+status);  // - change it
@@ -39,12 +39,12 @@ in program.cs..
             return false;
         }
         
-</xmp>
+</textarea>
 </code>
 
 in App.config..
 <code>
-<xmp>
+<textarea>
   <appSettings>
     <!-- Fill in your consumer key and secret here to make the OAuth sample work. -->
     <!-- Twitter sign-up: https://dev.twitter.com/ -->
@@ -53,7 +53,7 @@ in App.config..
     <add key="ClientSettingsProvider.ServiceUri" value="" />
   </appSettings>
   
- </xmp>
+ </textarea>
  </code>
     change two key values.<br>
     
