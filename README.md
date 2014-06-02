@@ -43,16 +43,15 @@ in program.cs..
 </code>
 
 in App.config..
-<code>
-<pre>
 
-    &lt;add key="consumerSecret" value="insertyourAPIkeySecret" /&gt;
-    &lt;add key="ClientSettingsProvider.ServiceUri" value="" /&gt;
-  
-  </pre>
- </code>
- 
- 
+          <appSettings>
+            <!-- Fill in your consumer key and secret here to make the OAuth sample work. -->
+            <!-- Twitter sign-up: https://dev.twitter.com/ -->
+            <add key="consumerKey" value="insertyourAPIkey" />
+            <add key="consumerSecret" value="insertyourAPIkeySecret" />
+            <add key="ClientSettingsProvider.ServiceUri" value="" />
+          </appSettings>
+        
 change two key values.<br>
 and build it<br>
 END.
