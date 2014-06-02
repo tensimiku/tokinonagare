@@ -11,9 +11,10 @@ how to use it
 in program.cs..
 
 <code>
+<pre>
         static async Task ReplyAsync(TwitterContext twitterCtx, ulong tweetid,string status)
         {
-            var tweet = await twitterCtx.ReplyAsync(tweetid, "@changeityours "+status);  // &lt- change it
+            var tweet = await twitterCtx.ReplyAsync(tweetid, "@changeityours "+status);  // &lt;- change it
                 if (tweet != null)
                     Console.WriteLine(
                         "Status returned: " +
@@ -27,34 +28,33 @@ in program.cs..
         static bool chkengine(string msg)
         {
             string mentchk = mentidparser(msg);
-            if (mentchk.ToLower() == "mentioncheckstring") // &lt- change it
+            if (mentchk.ToLower() == "mentioncheckstring") // &lt;- change it
                 
                 string idchk = idparser(msg);
-                if (idchk.ToLower() == "idcheckstring") // &lt- change it
+                if (idchk.ToLower() == "idcheckstring") // &lt;- change it
                 {
                     return true;
                 }
             }
             return false;
         }
+        
+</pre>
 </code>
 
 in App.config..
 <code>
-<textarea>
-  <appSettings>
-    <!-- Fill in your consumer key and secret here to make the OAuth sample work. -->
-    <!-- Twitter sign-up: https://dev.twitter.com/ -->
-    <add key="consumerKey" value="insertyourAPIkey" />  
-    <add key="consumerSecret" value="insertyourAPIkeySecret" />
-    <add key="ClientSettingsProvider.ServiceUri" value="" />
-  </appSettings>
+<pre>
+
+    &lt;add key="consumerSecret" value="insertyourAPIkeySecret" /&gt;
+    &lt;add key="ClientSettingsProvider.ServiceUri" value="" /&gt;
   
- </textarea>
+  </pre>
  </code>
-    change two key values.<br>
-    
-    and build it<br>
-    END.
+ 
+ 
+change two key values.<br>
+and build it<br>
+END.
     
 
