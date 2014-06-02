@@ -11,7 +11,7 @@ how to use it
 in program.cs..
 
 <code>
-<pre>
+<xmp>
         static async Task ReplyAsync(TwitterContext twitterCtx, ulong tweetid,string status)
         {
             var tweet = await twitterCtx.ReplyAsync(tweetid, "@changeityours "+status);  // - change it
@@ -28,10 +28,10 @@ in program.cs..
         static bool chkengine(string msg)
         {
             string mentchk = mentidparser(msg);
-            if (mentchk.ToLower() == "mentioncheckstring") // &lt- change it
-            {
+            if (mentchk.ToLower() == "mentioncheckstring") // <- change it
+                
                 string idchk = idparser(msg);
-                if (idchk.ToLower() == "idcheckstring") // &lt- change it
+                if (idchk.ToLower() == "idcheckstring") // <- change it
                 {
                     return true;
                 }
@@ -39,14 +39,12 @@ in program.cs..
             return false;
         }
         
-</pre>
+</xmp>
 </code>
 
 in App.config..
-
 <code>
-<pre>
-
+<xmp>
   <appSettings>
     <!-- Fill in your consumer key and secret here to make the OAuth sample work. -->
     <!-- Twitter sign-up: https://dev.twitter.com/ -->
@@ -55,8 +53,8 @@ in App.config..
     <add key="ClientSettingsProvider.ServiceUri" value="" />
   </appSettings>
   
-</pre>
-</code>
+ </xmp>
+ </code>
     change two key values.<br>
     
     and build it<br>
